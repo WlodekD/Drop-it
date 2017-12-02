@@ -1,0 +1,16 @@
+
+function dropElements(arr, func) {
+  
+  var filter = arr.filter(func);
+  var index = arr.indexOf(filter[0]);
+  
+  var res = arr.slice(index);
+  
+  if(index === -1){
+    return [];
+  }else{
+    return res;
+  }
+}
+
+dropElements([1, 2, 3, 4], function(n) {return n >= 3;});
